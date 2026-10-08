@@ -1,0 +1,41 @@
+name: Chore
+description: Propose maintenance work with no user-facing behavior change
+title: "[Chore]: "
+labels:
+  - "type:chore"
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the maintenance work, such as dependency updates, refactors, tooling, CI, or cleanup.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Explain why this work is needed now and what happens if it is deferred.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Define what is included and what is explicitly excluded.
+    validations:
+      required: true
+  - type: textarea
+    id: verification-plan
+    attributes:
+      label: Verification plan
+      description: Explain how you will confirm that behavior is unchanged.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I confirm that the information is accurate and contains no secrets or sensitive data.
+          required: true

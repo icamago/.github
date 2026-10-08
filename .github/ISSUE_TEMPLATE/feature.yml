@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose a new feature or enhancement
+title: "[Feature]: "
+labels:
+  - "type:feature"
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the requested feature.
+    validations:
+      required: true
+  - type: textarea
+    id: problem-evidence
+    attributes:
+      label: Problem and evidence
+      description: Describe the problem and provide relevant evidence or context.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-scope
+    attributes:
+      label: Proposed scope
+      description: Define what should and should not be included.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: List the observable conditions required for completion.
+    validations:
+      required: true
+  - type: textarea
+    id: verification-plan
+    attributes:
+      label: Verification plan
+      description: Explain how the feature will be verified.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I confirm that the information is accurate and contains no secrets or sensitive data.
+          required: true

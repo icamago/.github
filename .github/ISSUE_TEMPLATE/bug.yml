@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a reproducible defect in existing behavior
+title: "[Bug]: "
+labels:
+  - "type:bug"
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping us diagnose and fix a reproducible defect.
+  - type: textarea
+    id: observed-behavior
+    attributes:
+      label: Problem and observed behavior
+      description: Describe the problem and what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest reliable sequence that reproduces the defect.
+      placeholder: |
+        1. Go to ...
+        2. Perform ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe what should have happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: impact-severity
+    attributes:
+      label: Impact and severity
+      description: Select the option that best describes the defect's impact.
+      options:
+        - Blocker - prevents essential use with no workaround
+        - Critical - causes severe impact, data loss, or a security risk
+        - Major - significantly disrupts use, but a workaround may exist
+        - Minor - limited impact that does not block normal use
+    validations:
+      required: true
+  - type: textarea
+    id: environment-version
+    attributes:
+      label: Environment and version
+      description: Include the affected version or commit and relevant OS, device, browser, or runtime details.
+    validations:
+      required: true
+  - type: textarea
+    id: logs-context
+    attributes:
+      label: Sanitized logs and additional context
+      description: Optional. Add only sanitized logs, screenshots, or context. Do not include secrets, credentials, tokens, private customer or production data, or raw sensitive payloads.
+    validations:
+      required: false
+  - type: checkboxes
+    id: duplicate-search
+    attributes:
+      label: Duplicate search
+      options:
+        - label: I searched open and closed issues and did not find an existing report for this defect.
+          required: true
